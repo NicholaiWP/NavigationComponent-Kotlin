@@ -41,7 +41,7 @@ class SettingsFragment : Fragment() {
         settingsSectionsList.add(CategorySettings("Preferences"))
         settingsSectionsList.add(CategorySettings("Themes"))
         settingsSectionsList.add(CategorySettings("About"))
-
+       //TODO: more sections?
         return setupSettingCategories()
     }
 
