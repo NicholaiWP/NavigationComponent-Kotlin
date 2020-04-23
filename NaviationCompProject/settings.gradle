@@ -1,0 +1,2 @@
+rootProject.name='NavigationComponentProject'
+include ':app'

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_nav"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.application.navigationcomponentproject.views.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.application.navigationcomponentproject.views.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.application.navigationcomponentproject.views.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settings_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+        <action
+            android:id="@+id/action_settings_to_generalFragment"
+            app:destination="@id/generalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favourite"
+        android:name="com.application.navigationcomponentproject.views.FavouriteFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.application.navigationcomponentproject.views.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_aboutFragment_to_settings2"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/generalFragment"
+        android:name="com.application.navigationcomponentproject.views.GeneralFragment"
+        android:label="fragment_general"
+        tools:layout="@layout/fragment_general" >
+        <action
+            android:id="@+id/action_generalFragment_to_settings2"
+            app:destination="@id/settings" />
+    </fragment>
+</navigation>
