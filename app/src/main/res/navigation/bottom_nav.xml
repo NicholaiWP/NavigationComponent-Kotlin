@@ -37,6 +37,10 @@
         <action
             android:id="@+id/action_aboutFragment_to_settings2"
             app:destination="@id/settings" />
+        <argument
+            android:name="Message"
+            app:argType="string"
+            android:defaultValue="Default" />
     </fragment>
     <fragment
         android:id="@+id/generalFragment"

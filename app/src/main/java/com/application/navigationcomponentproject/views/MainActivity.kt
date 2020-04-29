@@ -3,6 +3,7 @@ package com.application.navigationcomponentproject.views
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
@@ -21,9 +22,9 @@ class MainActivity : AppCompatActivity() {
         navController = findNavController(R.id.nav_host_fragment)
 
         bottomNavigation.setupWithNavController(navController)
-       // supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         setupActionBar(navController)
+
     }
 
     private fun setupActionBar(navController:NavController){
@@ -36,14 +37,4 @@ class MainActivity : AppCompatActivity() {
         return super.onSupportNavigateUp()
     }
 
-
-    /* pass object with transition
-    override fun onClick(v: View) {
-        val amountTv: EditText = view!!.findViewById(R.id.editTextAmount)
-        val amount = amountTv.text.toString().toInt()
-        val action = SpecifyAmountFragmentDirections.confirmationAction(amount)
-        v.findNavController().navigate(action)
-    }
-
-     */
 }

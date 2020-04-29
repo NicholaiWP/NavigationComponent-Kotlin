@@ -4,13 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/grey"
+    android:background="@color/white_variant"
     tools:context=".views.FavouriteFragment">
 
    <ListView
        android:id="@+id/settings_list"
+       android:divider="@null"
+       android:dividerHeight="0dp"
        android:layout_width="match_parent"
-       android:layout_height="wrap_content">
+       android:layout_height="match_parent">
    </ListView>
 
 

@@ -6,9 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import android.widget.Toast
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import com.application.navigationcomponentproject.R
 import com.application.navigationcomponentproject.models.CategorySettings
+import com.application.navigationcomponentproject.views.SettingsFragmentDirections
 
 class SettingsAdapter(private val context:Context, resourceId: Int, private val listObject: ArrayList<CategorySettings>): BaseAdapter() {
 
@@ -21,6 +24,12 @@ class SettingsAdapter(private val context:Context, resourceId: Int, private val 
         val category = this.getItem(position) as CategorySettings
 
         val txt = myView!!.findViewById<TextView>(R.id.category_text) as TextView
+        val txtHeadline = myView.findViewById<TextView>(R.id.settings_item_section)
+
+       for (items in listObject){
+           txtHeadline.setText("Your category description")
+       }
+
         txt.setText(category.getCategory())
 
         myView.setOnClickListener(View.OnClickListener {
@@ -32,14 +41,11 @@ class SettingsAdapter(private val context:Context, resourceId: Int, private val 
                 category.getCategory() == "General" -> {
                     myView.findNavController().navigate(R.id.generalFragment)
                 }
-                category.getCategory() == "Privacy" -> {
-
+                category.getCategory() == "Privacy" -> { val exampleToast =  Toast.makeText(myView.context.applicationContext, "Not yet implemented", Toast.LENGTH_SHORT)
+                    exampleToast.show()
                 }
-                category.getCategory() == "Preferences" -> {
-
-                }
-                category.getCategory() == "Themes" -> {
-
+                category.getCategory() == "Preferences" -> { val exampleToast =  Toast.makeText(myView.context.applicationContext, "Not yet implemented", Toast.LENGTH_SHORT)
+                    exampleToast.show()
                 }
             }
         })
